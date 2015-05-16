@@ -1,0 +1,22 @@
+{
+  "name": "console-group",
+  "version": "0.1.0",
+  "description": "basic console.group implementation for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rich-harris/node-console-group"
+  },
+  "keywords": [
+    "console"
+  ],
+  "author": "Rich Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rich-harris/node-console-group/issues"
+  },
+  "homepage": "https://github.com/rich-harris/node-console-group"
+}
