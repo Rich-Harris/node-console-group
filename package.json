@@ -1,6 +1,6 @@
 {
   "name": "console-group",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "basic console.group implementation for node",
   "main": "index.js",
   "scripts": {
