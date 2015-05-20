@@ -7,5 +7,6 @@ console.group( 'test' );
 
 	console.group( 'test' );
 		console.log( 'double indented' );
+		console.log({ foo: 'bar', bar: 'baz', baz: 'qux', arr: [ 'a', 'b', 'c', 'd', 'e', 'f' ]})
 	console.groupEnd();
 console.groupEnd();

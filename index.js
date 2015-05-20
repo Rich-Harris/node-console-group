@@ -1,35 +1,18 @@
+var util = require( 'util' );
 var originalLog = console.log;
 var prefix = '';
 
+function format ( args ) {
+	return util.format.apply( null, args ).replace( /^/gm, prefix );
+}
+
 function consoleLog () {
-	var result;
-
-	if ( typeof arguments[0] === 'string' ) {
-		arguments[0] = prefix + arguments[0];
-		result = originalLog.apply( console, arguments );
-	} else {
-		var args = [ prefix ];
-		var i;
-
-		for ( i = 0; i < arguments.length; i += 1 ) {
-			args.push( arguments[i] );
-		}
-
-		result = originalLog.apply( console, args );
-	}
-
-	return result;
+	this._stdout.write( format( arguments ) + '\n' );
 }
 
 function consoleGroup () {
-	originalLog.call( console, prefix );
-	process.stderr.write( '\u001b[1m' );
-	console.log.apply( console, arguments );
-	process.stderr.write( '\u001b[22m' );
-
-	console.log( '⎡' );
-
 	prefix += '⎢ ';
+	process.stderr.write( '\u001b[1m' + format( arguments ) + '\u001b[22m\n' );
 }
 
 function consoleGroupEnd () {
