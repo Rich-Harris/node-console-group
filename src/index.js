@@ -20,16 +20,14 @@ function consoleGroupEnd () {
 	console.log( '⎣' );
 }
 
-module.exports = {
-	install: function () {
-		console.log = consoleLog;
-		console.group = consoleGroup;
-		console.groupEnd = consoleGroupEnd;
-	},
+export function install () {
+	console.log = consoleLog;
+	console.group = consoleGroup;
+	console.groupEnd = consoleGroupEnd;
+}
 
-	teardown: function () {
-		console.log = originalLog;
-		delete console.group;
-		delete console.groupEnd;
-	}
-};
+export function teardown () {
+	console.log = originalLog;
+	delete console.group;
+	delete console.groupEnd;
+}
