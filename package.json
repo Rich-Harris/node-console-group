@@ -1,11 +1,20 @@
 {
   "name": "console-group",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "basic console.group implementation for node",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "prepublish": "npm test"
   },
+  "files": [
+    "src",
+    "lib",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/rich-harris/node-console-group"
@@ -18,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/rich-harris/node-console-group/issues"
   },
-  "homepage": "https://github.com/rich-harris/node-console-group"
+  "homepage": "https://github.com/rich-harris/node-console-group",
+  "devDependencies": {
+    "rollup": "^0.23.1"
+  }
 }
