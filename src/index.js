@@ -12,7 +12,7 @@ function consoleLog () {
 
 function consoleGroup () {
 	prefix += '⎢ ';
-	process.stderr.write( '\u001b[1m' + format( arguments ) + '\u001b[22m\n' );
+	this._stdout.write( '\u001b[1m' + format( arguments ) + '\u001b[22m\n' );
 }
 
 function consoleGroupEnd () {

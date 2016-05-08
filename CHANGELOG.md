@@ -1,5 +1,9 @@
 # node-console-group changelog
 
+## 0.2.1
+
+* Consistently use `this._stdout`
+
 ## 0.2.0
 
 * `jsnext:main`

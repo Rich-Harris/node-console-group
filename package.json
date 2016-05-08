@@ -1,6 +1,6 @@
 {
   "name": "console-group",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "basic console.group implementation for node",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
