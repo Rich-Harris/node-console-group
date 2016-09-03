@@ -1,13 +1,20 @@
-var util = require( 'util' );
-var originalLog = console.log;
-var prefix = '';
+import * as util from 'util';
+
+const originalLog = console.log;
+const originalError = console.error;
+
+let prefix = '';
 
 function format ( args ) {
-	return util.format.apply( null, args ).replace( /^/gm, prefix );
+	return util.format( ...args ).replace( /^/gm, prefix );
 }
 
 function consoleLog () {
 	this._stdout.write( format( arguments ) + '\n' );
+}
+
+function consoleError () {
+	this._stderr.write( format( arguments ) + '\n' );
 }
 
 function consoleGroup () {
@@ -17,17 +24,18 @@ function consoleGroup () {
 
 function consoleGroupEnd () {
 	prefix = prefix.slice( 0, -2 );
-	console.log( '⎣' );
 }
 
 export function install () {
 	console.log = consoleLog;
+	console.error = consoleError;
 	console.group = consoleGroup;
 	console.groupEnd = consoleGroupEnd;
 }
 
 export function teardown () {
 	console.log = originalLog;
+	console.error = originalError;
 	delete console.group;
 	delete console.groupEnd;
 }
