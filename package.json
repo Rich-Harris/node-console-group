@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/rich-harris/node-console-group",
   "devDependencies": {
-    "rollup": "^0.23.1"
+    "rollup": "^0.23.1",
+    "rollup-plugin-buble": "^0.13.0"
   }
 }
