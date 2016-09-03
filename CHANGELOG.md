@@ -1,5 +1,9 @@
 # node-console-group changelog
 
+## 0.3.0
+
+* Override `console.error` as well (fix `console.trace` as a corollary)
+
 ## 0.2.1
 
 * Consistently use `this._stdout`
