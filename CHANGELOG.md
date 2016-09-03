@@ -1,5 +1,9 @@
 # node-console-group changelog
 
+## 0.3.1
+
+* Update build process etc
+
 ## 0.3.0
 
 * Override `console.error` as well (fix `console.trace` as a corollary)
