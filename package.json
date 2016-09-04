@@ -1,6 +1,6 @@
 {
   "name": "console-group",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "basic console.group implementation for node",
   "main": "dist/console-group.cjs.js",
   "module": "dist/console-group.es.js",
@@ -12,8 +12,7 @@
     "prepublish": "npm test"
   },
   "files": [
-    "src",
-    "lib",
+    "dist",
     "README.md"
   ],
   "repository": {
