@@ -1,5 +1,9 @@
 # node-console-group changelog
 
+## 0.3.3
+
+* Add `console.warn` support ([#3](https://github.com/Rich-Harris/node-console-group/issues/3))
+
 ## 0.3.2
 
 * Include dist files!

@@ -1,6 +1,6 @@
 {
   "name": "console-group",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "basic console.group implementation for node",
   "main": "dist/console-group.cjs.js",
   "module": "dist/console-group.es.js",
