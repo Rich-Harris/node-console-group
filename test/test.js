@@ -3,6 +3,7 @@ require( '../' ).install();
 console.group( 'test' );
 	console.log( 'indented' );
 	console.error( 'stdout' );
+	console.warn( 'also stdout' );
 
 	console.log( 'another indented line' );
 

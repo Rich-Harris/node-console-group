@@ -1,6 +1,7 @@
 import * as util from 'util';
 
 const originalLog = console.log;
+const originalWarn = console.warn;
 const originalError = console.error;
 
 let prefix = '';
@@ -28,13 +29,14 @@ function consoleGroupEnd () {
 
 export function install () {
 	console.log = consoleLog;
-	console.error = consoleError;
+	console.warn = console.error = consoleError;
 	console.group = consoleGroup;
 	console.groupEnd = consoleGroupEnd;
 }
 
 export function teardown () {
 	console.log = originalLog;
+	console.warn = originalWarn;
 	console.error = originalError;
 	delete console.group;
 	delete console.groupEnd;
